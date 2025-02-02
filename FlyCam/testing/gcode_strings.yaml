@@ -1,0 +1,6 @@
+# GCode Strings
+# Purpose: User Friendly typing (under re-evaluation)
+
+home: G28
+absolute_position: G90
+relative_position: G91

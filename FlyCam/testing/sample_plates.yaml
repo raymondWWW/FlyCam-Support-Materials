@@ -1,0 +1,103 @@
+# Sample Plate Dimensions and Locations
+
+# Naming Format: [number of rows]x[number of columns
+#       Example: 2x3 for 2 rows and 3 columns
+
+cell_sensor:
+  2x3:
+    number_of_rows: 2
+    number_of_columns: 3
+    # starting_location is in mm (imagine a grid)
+    starting_location:
+      x: 50
+      y: 140
+      z: 50
+    # well_distance is the horizontal (x) and vertical (y) distance between the centers of each well
+    # They are usually designed to be like squares, with same distances in the horizontal and vertical
+    # Format:
+    #  well_distance: (38, 38)
+    well_distance: (38, 38)
+    # location_list will store the centers of all wells in absolute positioning with this format: [x, y, z]
+    # The pattern will be a American style reading format (left to right)
+    # The number key matches the well number (if 1 is the top-left and 6 is the bottom-right)
+    location_list:
+      # Row 1:
+      1: [50, 140, 50]
+      2: [90, 140, 50]
+      3: [140, 140, 50]
+      # Row 2:
+      4: [50, 100, 50]
+      5: [900, 100, 50]
+      6: [140, 100, 50]
+    # path_list will store the actual path the extruder will travel (can be Z-Pattern or U-Patterns)
+    # The number keys (single digits) represent the path (or node), not the well number.
+    # So 1 is the first well to be visited, and 4 is the 4th well to be visited
+    paths:
+      all_z:
+        # Row 1:
+        1: [ 50, 140, 50 ]
+        2: [ 90, 140, 50 ]
+        3: [ 140, 140, 50 ]
+        # Row 2:
+        4: [ 50, 100, 50 ]
+        5: [ 900, 100, 50 ]
+        6: [ 140, 100, 50 ]
+      all_u:
+        # Row 1:
+        1: [ 50, 140, 50 ]
+        2: [ 90, 140, 50 ]
+        3: [ 140, 140, 50 ]
+        # Row 2:
+        4: [ 140, 100, 50 ]
+        5: [ 900, 100, 50 ]
+        6: [ 50, 100, 50 ]
+
+# For the MHT project, the 3D Printer in Lab
+mht:
+  2x3:
+    number_of_rows: 4
+    number_of_columns: 6
+    # starting_location is in mm (imagine a grid)
+    starting_location:
+      x: 50
+      y: 140
+      z: 50
+    # well_distance is the horizontal (x) and vertical (y) distance between the centers of each well
+    # They are usually designed to be like squares, with same distances in the horizontal and vertical
+    well_distance:
+      x: 38
+      y: 38
+    # location_list will store the centers of all wells in absolute positioning with this format: [x, y, z]
+    # The pattern will be a American style reading format (left to right)
+    # The number key matches the well number (if 1 is the top-left and 6 is the bottom-right)
+    location_list:
+      # Row 1:
+      1: [50, 140, 50]
+      2: [90, 140, 50]
+      3: [140, 140, 50]
+      # Row 2:
+      4: [50, 100, 50]
+      5: [900, 100, 50]
+      6: [140, 100, 50]
+    # path_list will store the actual path the extruder will travel (can be Z-Pattern or U-Patterns)
+    # The number keys (single digits) represent the path (or node), not the well number.
+    # So 1 is the first well to be visited, and 4 is the 4th well to be visited
+    paths:
+      all_z:
+        # Row 1:
+        1: [ 50, 140, 50 ]
+        2: [ 90, 140, 50 ]
+        3: [ 140, 140, 50 ]
+        # Row 2:
+        4: [ 50, 100, 50 ]
+        5: [ 900, 100, 50 ]
+        6: [ 140, 100, 50 ]
+      all_u:
+        # Row 1:
+        1: [ 50, 140, 50 ]
+        2: [ 90, 140, 50 ]
+        3: [ 140, 140, 50 ]
+        # Row 2:
+        4: [ 140, 100, 50 ]
+        5: [ 900, 100, 50 ]
+        6: [ 50, 100, 50 ]
